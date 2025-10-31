@@ -12,6 +12,19 @@ function updateInfoboxToilepapir() {
   document.querySelector("#requirement").innerHTML = "<h3>Sværhedsgrad:</h3><p>Let, da du bare vikler det rundt om trussen.</p>";
 }
 
+// Hovereffekt //
+document.querySelector("#hotspotBtnToiletpapir").addEventListener("mouseover", addBrightnessToiletpapir);
+function addBrightnessToiletpapir() {
+  console.log("addBrightnessToiletpapir");
+  document.querySelector("#toiletpapir").style.filter = "brightness(120%)";
+}
+
+document.querySelector("#hotspotBtnToiletpapir").addEventListener("mouseout", noBrightnessToiletpapir);
+function noBrightnessToiletpapir() {
+  console.log("noBrightnessToiletpapir");
+  document.querySelector("#toiletpapir").style.filter = "brightness(100%)";
+}
+
 /* Infobox - Bind */
 document.querySelector("#hotspotBtnBind").addEventListener("click", updateInfoboxBind);
 function updateInfoboxBind() {
@@ -22,6 +35,19 @@ function updateInfoboxBind() {
   document.querySelector("#requirement").innerHTML = "<h3>Sværhedsgrad:</h3><p>Let, da du bare bøjer vingerne rundt om trussen.</p>";
 }
 
+// Hovereffekt //
+document.querySelector("#hotspotBtnBind").addEventListener("mouseover", addBrightnessBind);
+function addBrightnessBind() {
+  console.log("addBrightnessBind");
+  document.querySelector("#bind").style.filter = "brightness(120%)";
+}
+
+document.querySelector("#hotspotBtnBind").addEventListener("mouseout", noBrightnessBind);
+function noBrightnessBind() {
+  console.log("noBrightnessBind");
+  document.querySelector("#bind").style.filter = "brightness(100%)";
+}
+
 /* Infobox - Tampon */
 document.querySelector("#hotspotBtnTampon").addEventListener("click", updateInfoboxTampon);
 function updateInfoboxTampon() {
@@ -30,4 +56,17 @@ function updateInfoboxTampon() {
   document.querySelector(".info-text .placeholder").textContent = "Føler du dig modig? Du kan forsøge med en tampon, som kan være mere avanceret for begyndere.";
   document.querySelector("#efficiency").innerHTML = "<h3>Effektivitet:</h3><p>God, da sugeevnen er bedre end bind.</p>";
   document.querySelector("#requirement").innerHTML = "<h3>Sværhedsgrad:</h3><p>Svær, da man nok skal være lidt mere øvet. Det kan være svært at vinkle den korrekt.</p>";
+}
+
+// Hovereffekt //
+document.querySelector("#hotspotBtnTampon").addEventListener("mouseover", addBrightnessTampon);
+function addBrightnessTampon() {
+  console.log("addBrightnessTampon");
+  document.querySelector("#tamponer").style.filter = "brightness(120%)";
+}
+
+document.querySelector("#hotspotBtnTampon").addEventListener("mouseout", noBrightnessTampon);
+function noBrightnessTampon() {
+  console.log("noBrightnessTampon");
+  document.querySelector("#tamponer").style.filter = "brightness(100%)";
 }
