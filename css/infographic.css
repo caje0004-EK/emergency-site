@@ -40,7 +40,6 @@
   background-color: var(--color-infobox-2-bg);
 }
 
-
 /* hotspots */
 #hotspotBtnTampon,
 #hotspotBtnBind,
@@ -52,6 +51,7 @@
 #hotspotBtnTampon:hover,
 #hotspotBtnBind:hover,
 #hotspotBtnToiletpapir:hover {
-  fill: #ffa680;
+  filter: brightness(120%);
+
   cursor: pointer;
 }
