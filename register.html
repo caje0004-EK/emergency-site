@@ -34,13 +34,47 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>FÅ RÅD FRA OS</h1>
       <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
+        <article id="form-info"></article>
+        <form id="webform">
+          <h2>Om hændelsen</h2>
+          <label for="situation">Beskriv din situation og evt. dilemma</label>
+          <textarea name="situation" id="situation"></textarea>
+          <fieldset>
+            <legend>
+              <p>Blødte/bløder du meget?</p>
+            </legend>
+            <label for="maengde"> <input type="radio" id="ja" name="maengde" value="ja" />Ja </label>
+            <label for="maengde"> <input type="radio" id="nej" name="maengde" value="ja" />Nej </label>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <p>Har du fortalt dine forældre om nyheden?</p>
+            </legend>
+            <label for="foraeldre"> <input type="radio" id="ja" name="foraeldre" value="ja" />Ja </label>
+            <label for="foraeldre"> <input type="radio" id="nej" name="foraeldre" value="ja" />Nej </label>
+          </fieldset>
+          <label for="hvor">Hvor var du henne, da du fik din menstruation?</label>
+          <select name="hvor" id="hvor">
+            <option value="">-- Vælg --</option>
+            <option value="hjemme">Hjemme</option>
+            <option value="ude">Ude</option>
+          </select>
+          <div>
+            <h3>Login-oplysninger</h3>
+          </div>
+          <label for="brugernavn">Brugernavn</label>
+          <input type="text" />
+
+          <label for="email">E-mail</label>
+          <input type="email" />
+
+          <label for="kode">Kodeord</label>
+          <input type="password" />
+
+          <button>Indsend</button>
+        </form>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>

@@ -70,3 +70,8 @@ function noBrightnessTampon() {
   console.log("noBrightnessTampon");
   document.querySelector("#tamponer").style.filter = "brightness(100%)";
 }
+
+/* ****************************************************************************************** */
+/* Formsside */
+/* ****************************************************************************************** */
+
