@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -36,43 +36,55 @@
     <main>
       <h1>FÅ RÅD FRA OS</h1>
       <section id="form-section">
-        <article id="form-info"></article>
         <form id="webform">
           <h2>Om hændelsen</h2>
-          <label for="situation">Beskriv din situation og evt. dilemma</label>
-          <textarea name="situation" id="situation"></textarea>
-          <fieldset>
-            <legend>
-              <p>Blødte/bløder du meget?</p>
-            </legend>
-            <label for="maengde"> <input type="radio" id="ja" name="maengde" value="ja" />Ja </label>
-            <label for="maengde"> <input type="radio" id="nej" name="maengde" value="ja" />Nej </label>
-          </fieldset>
-          <fieldset>
-            <legend>
-              <p>Har du fortalt dine forældre om nyheden?</p>
-            </legend>
-            <label for="foraeldre"> <input type="radio" id="ja" name="foraeldre" value="ja" />Ja </label>
-            <label for="foraeldre"> <input type="radio" id="nej" name="foraeldre" value="ja" />Nej </label>
-          </fieldset>
-          <label for="hvor">Hvor var du henne, da du fik din menstruation?</label>
-          <select name="hvor" id="hvor">
-            <option value="">-- Vælg --</option>
-            <option value="hjemme">Hjemme</option>
-            <option value="ude">Ude</option>
-          </select>
-          <div>
-            <h3>Login-oplysninger</h3>
+          <div class="form-group">
+            <label for="hvor">Hvor var du henne, da du fik din første menstruation?</label>
+            <select name="hvor" id="hvor">
+              <option value="">-- Vælg --</option>
+              <option value="hjemme">Hjemme</option>
+              <option value="ude">Ude</option>
+            </select>
           </div>
-          <label for="brugernavn">Brugernavn</label>
-          <input type="text" />
-
-          <label for="email">E-mail</label>
-          <input type="email" />
-
-          <label for="kode">Kodeord</label>
-          <input type="password" />
-
+          <div class="form-group">
+            <label for="situation">Beskriv din situation og evt. dilemma</label>
+            <textarea name="situation" id="situation" required></textarea>
+            <p class="error-message">Angiv venligst et svar</p>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <p>Blødte/bløder du meget?</p>
+              </legend>
+              <label for="maengde-ja"> <input type="radio" id="maengde-ja" name="maengde" value="ja" />Ja </label>
+              <label for="maengde-nej"> <input type="radio" id="maengde-nej" name="maengde" value="ja" />Nej </label>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <p>Har du fortalt dine forældre om nyheden?</p>
+              </legend>
+              <label for="foraeldre-ja"> <input type="radio" id="foraeldre-ja" name="foraeldre" value="ja" />Ja </label>
+              <label for="foraeldre-nej"> <input type="radio" id="foraeldre-nej" name="foraeldre" value="ja" />Nej </label>
+            </fieldset>
+          </div>
+          <div class="login-oplysninger">
+            <h3>Opret profil</h3>
+            <p>... så vi kan komme i kontakt med dig!</p>
+            <div class="form-group">
+              <label for="brugernavn">Brugernavn</label> <input type="text" id="brugernavn" required />
+              <p class="error-message">Angiv minimum 1 tegn</p>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label> <input type="email" id="email" required />
+              <p class="error-message">Angiv minimum 1 tegn</p>
+            </div>
+            <div class="form-group">
+              <label for="kode">Kodeord</label> <input type="password" id="kode" minlength="8" required />
+              <p class="error-message">Angiv minimum 8 tegn</p>
+            </div>
+          </div>
           <button>Indsend</button>
         </form>
       </section>
@@ -110,6 +122,6 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.js"></script>
   </body>
 </html>
