@@ -38,7 +38,7 @@
       <section id="form-section">
         <form id="webform">
           <h2>Om hændelsen</h2>
-          <div class="form-group">
+          <div class="form-group" aria-label="Menstruationsråd form">
             <label for="hvor">Hvor var du henne, da du fik din første menstruation?</label>
             <select name="hvor" id="hvor">
               <option value="">-- Vælg --</option>
@@ -48,8 +48,8 @@
           </div>
           <div class="form-group">
             <label for="situation">Beskriv din situation og evt. dilemma</label>
-            <textarea name="situation" id="situation" required></textarea>
-            <p class="error-message">Angiv venligst et svar</p>
+            <textarea name="situation" id="situation" aria-describedby="textarea-error" required></textarea>
+            <p class="error-message" id="textarea-error">Angiv venligst et svar</p>
           </div>
           <div class="form-group">
             <fieldset>
@@ -73,16 +73,16 @@
             <h3>Opret profil</h3>
             <p>... så vi kan komme i kontakt med dig!</p>
             <div class="form-group">
-              <label for="brugernavn">Brugernavn</label> <input type="text" id="brugernavn" required />
-              <p class="error-message">Angiv minimum 1 tegn</p>
+              <label for="brugernavn">Brugernavn</label> <input type="text" id="brugernavn" aria-describedby="brugernavn-error" required />
+              <p class="error-message" id="brugernavn-error">Angiv minimum 1 tegn</p>
             </div>
             <div class="form-group">
-              <label for="email">E-mail</label> <input type="email" id="email" required />
-              <p class="error-message">Angiv minimum 1 tegn</p>
+              <label for="email">E-mail</label> <input type="email" id="email" aria-describedby="email-error" required />
+              <p class="error-message" id="email-error">Angiv minimum 1 tegn</p>
             </div>
             <div class="form-group">
-              <label for="kode">Kodeord</label> <input type="password" id="kode" minlength="8" required />
-              <p class="error-message">Angiv minimum 8 tegn</p>
+              <label for="kode">Kodeord</label> <input type="password" id="kode" minlength="8" aria-describedby="password-error" />
+              <p class="error-message" id="password-error">Angiv minimum 8 tegn</p>
             </div>
           </div>
           <button>Indsend</button>
