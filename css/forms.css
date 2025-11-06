@@ -156,3 +156,11 @@ fieldset label {
     display: block;
   }
 }
+
+.output p {
+  font-weight: bold;
+}
+
+.output span {
+  font-weight: normal;
+}
