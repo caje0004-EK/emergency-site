@@ -52,6 +52,5 @@
 #hotspotBtnBind:hover,
 #hotspotBtnToiletpapir:hover {
   filter: brightness(120%);
-
   cursor: pointer;
 }

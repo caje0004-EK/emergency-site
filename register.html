@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -34,18 +34,72 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>FÅ RÅD FRA OS</h1>
       <section id="form-section">
-        <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
-        </article>
-        <form id="webform"></form>
+        <form id="webform">
+          <h2>Om hændelsen</h2>
+          <div class="form-group" aria-label="Menstruationsråd form">
+            <label for="hvor">Hvor var du henne, da du fik din første menstruation?</label>
+            <select name="hvor" id="hvor">
+              <option value="">-- Vælg --</option>
+              <option value="hjemme">Hjemme</option>
+              <option value="ude">Ude</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="situation">Beskriv din situation og evt. dilemma</label>
+            <textarea name="situation" id="situation" aria-describedby="textarea-error" required></textarea>
+            <p class="error-message" id="textarea-error">Angiv venligst et svar</p>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <p>Blødte/bløder du meget?</p>
+              </legend>
+              <label for="maengde-ja"> <input type="radio" id="maengde-ja" name="maengde" value="ja" />Ja </label>
+              <label for="maengde-nej"> <input type="radio" id="maengde-nej" name="maengde" value="nej" />Nej </label>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend>
+                <p>Har du fortalt dine forældre om nyheden?</p>
+              </legend>
+              <label for="foraeldre-ja"> <input type="radio" id="foraeldre-ja" name="foraeldre" value="ja" />Ja </label>
+              <label for="foraeldre-nej"> <input type="radio" id="foraeldre-nej" name="foraeldre" value="neja" />Nej </label>
+            </fieldset>
+          </div>
+          <div class="login-oplysninger">
+            <h3>Opret profil</h3>
+            <p>... så vi kan komme i kontakt med dig!</p>
+            <div class="form-group">
+              <label for="username">Brugernavn</label> <input type="text" id="username" name="username" aria-describedby="uasername-error" required />
+              <p class="error-message" id="username-error">Angiv minimum 1 tegn</p>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label> <input type="email" id="email" name="email" aria-describedby="email-error" required />
+              <p class="error-message" id="email-error">Angiv minimum 1 tegn</p>
+            </div>
+            <div class="form-group">
+              <label for="password">Kodeord</label> <input type="password" id="password" name="password" minlength="8" aria-describedby="password-error" required />
+              <p class="error-message" id="password-error">Angiv minimum 8 tegn</p>
+            </div>
+          </div>
+          <button>Indsend</button>
+        </form>
       </section>
       <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
+        <h2>Opsummering</h2>
+        <article class="output">
+          <div>
+            <p>Lokation: <span id="hvor_output"></span></p>
+            <p>Situation: <span id="situation_output"></span></p>
+            <p>Bløder meget: <span id="maengde_output"></span></p>
+            <p>Oplyst forældre: <span id="foraeldre_output"></span></p>
+            <p>Brugernavn: <span id="username_output"></span></p>
+            <p>E-mail: <span id="email_output"></span></p>
+            <p>Kodeord: <span id="password_output"></span></p>
+          </div>
         </article>
       </section>
     </main>
@@ -76,6 +130,6 @@
       </nav>
     </footer>
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
+    <script src="js/register.js"></script>
   </body>
 </html>
