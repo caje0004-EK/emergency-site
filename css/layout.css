@@ -60,6 +60,7 @@ footer ul {
   gap: 0;
 }
 
+
 @media (width > 600px) {
   #frontpage > main {
     grid-template-columns: 6fr 3fr;
