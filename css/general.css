@@ -22,8 +22,15 @@ header {
 #main-disclamer-content {
   display: flex;
   column-gap: 1rem;
-}
 
+  &#main-disclamer-content img {
+    max-height: 10rem;
+    max-width: 2rem;
+  }
+}
+#main-disclamer-text {
+  padding: 3rem 0;
+}
 main section {
   padding: 20px;
   border-radius: var(--border-radius);
@@ -96,7 +103,11 @@ nav a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 3.6rem;
+  height: 5.6rem;
+
+  &#logotype-wrapper img {
+    max-height: 5rem;
+  }
 }
 
 #logotype-wrapper > a {
@@ -123,11 +134,11 @@ header > nav li > a:after {
 }
 
 /* Global menu hover effekt - Lav den om til det, du synes */
-nav a:hover {
+nav li a:hover {
   background-color: var(--color-link-hover);
 }
 
-nav a:active {
+nav li a:active {
   background-color: var(--color-link-active);
 }
 

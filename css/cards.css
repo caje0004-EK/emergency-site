@@ -50,6 +50,11 @@
 }
 .news_card p {
   margin: 0 0 1rem 0;
+
+  &.strong{
+  font-weight: bold;
+  margin-bottom: 0;
+}
 }
 .news_card:first-child:before {
   content: "BREAKING NEWS";
@@ -90,4 +95,98 @@
 .cta_btn:after {
   content: "\2192";
   margin-left: 1rem;
+}
+
+/* news */
+[popover] {
+  padding: 1rem 0;
+  max-height: 90vh;
+  max-width: 80ch;
+  width: 90vw;
+  margin: auto;
+  opacity: 0;
+  transition: 350ms allow-discrete;
+  scale: 0;
+
+  &:popover-open {
+    opacity: 1;
+    border-radius: 25px;
+    border: 0;
+    scale: 1;
+
+    &.artikel h4 {
+      padding: 15px;
+      margin-bottom: 1em;
+      background-color: var(--color-head-bg);
+      font-size: var(--font-h2-size);
+      color: var(--color-text-inverted);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.3rem;
+      text-align: left;
+      width: calc(80% - 6rem);
+      line-height: 2ch;
+      grid-column: 1/2;
+    }
+    &.artikel .text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &.artikel p {
+      padding: 0 30px;
+    }
+
+    &.artikel .news_top {
+      display: grid;
+      grid-template-columns: 9fr 1fr;
+    }
+  }
+
+  @starting-style {
+    &:popover-open {
+      opacity: 0;
+      scale: 0;
+    }
+  }
+
+  &::backdrop {
+    opacity: 0;
+    transition: 0.5s allow-discrete;
+    background: #0008;
+    backdrop-filter: blur(1.5px);
+  }
+
+  &:popover-open::backdrop {
+    opacity: 1;
+  }
+
+  @starting-style {
+    &:popover-open::backdrop {
+      opacity: 0;
+    }
+  }
+}
+
+.artikel .cta_btn {
+  position: sticky;
+  top: 0;
+  justify-self: end;
+  margin: 0 30px;
+  border-radius: 0;
+  border: 0;
+  background-color: #6f90eb;
+  padding: 0 0.5em;
+  grid-column: -1/-2;
+
+  &::after {
+    content: none;
+  }
+}
+
+button {
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
