@@ -25,7 +25,6 @@
   margin: 0 clamp(1rem, 10%, 7rem);
 }
 
-
 /* Form layout */
 form {
   accent-color: #ff4b00;
@@ -45,9 +44,9 @@ input {
   padding: 0.25rlh;
 }
 
-button {
+form button {
   background-color: #ff4b00;
-  color: #fffae2;
+  color: var(--color-text-inverted);
   border-radius: 5px;
   padding: 0.4em;
   font-weight: bold;
@@ -71,7 +70,7 @@ button {
 
 textarea,
 select {
-  background-color: #dbe2f5;
+  background-color: light-dark(#dbe2f5, #707070);
   border-radius: 15px;
   border: 0;
   padding: 0.5em 1em;
@@ -79,7 +78,7 @@ select {
 
 input {
   border: 0;
-  background-color: #fffae2;
+  background-color:light-dark(#fffae2, #494949);
 }
 
 fieldset {
@@ -120,7 +119,7 @@ fieldset label {
   font-weight: normal;
 }
 .login-oplysninger {
-  background-color: #dbe2f5;
+  background-color: light-dark(#dbe2f5, #707070);
   padding: 2em;
   margin: 1em;
   border-radius: 15px;
