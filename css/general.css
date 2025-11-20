@@ -39,7 +39,7 @@ main section {
 h1 {
   font-size: var(--font-h1-size);
   font-weight: var(--font-weight-bold);
-  color: var(--color-text-inverted);
+  color: var(--color-head-text);
   margin: 5px 0;
   line-height: 1.3rem;
   text-align: left;
@@ -63,7 +63,7 @@ h1 {
 .sub {
   font-size: var(--font-sub1-size);
   font-weight: var(--font-weight-light);
-  color: var(--color-text-inverted);
+  color: var(--color-head-text);
 }
 
 h2 {
@@ -120,9 +120,9 @@ nav a {
 
 /* Global menu */
 header nav li a {
-  margin: 1.5rem;
+  margin: 1rem;
   background-color: var(--color-link-bg);
-  color: var(--color-text);
+  color: var(--color-link-text);
   font-size: var(--followup-text-size);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius-links);

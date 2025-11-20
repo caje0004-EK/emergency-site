@@ -51,10 +51,10 @@
 .news_card p {
   margin: 0 0 1rem 0;
 
-  &.strong{
-  font-weight: bold;
-  margin-bottom: 0;
-}
+  &.strong {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
 }
 .news_card:first-child:before {
   content: "BREAKING NEWS";
@@ -161,7 +161,7 @@
   }
 
   @starting-style {
-    &:popover-open::backdrop {
+    &::backdrop {
       opacity: 0;
     }
   }

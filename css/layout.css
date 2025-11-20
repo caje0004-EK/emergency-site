@@ -60,7 +60,6 @@ footer ul {
   gap: 0;
 }
 
-
 @media (width > 600px) {
   #frontpage > main {
     grid-template-columns: 6fr 3fr;
@@ -82,4 +81,34 @@ footer ul {
   footer {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+/* toggle knap dark/light mode */
+#toggle {
+  background-color: #fffae2;
+  border-radius: 50px;
+  width: 60px;
+  height: 34px;
+}
+
+#slider {
+  display: block;
+  background-color: #6f90eb;
+  width: 29px;
+  height: 29px;
+  border-radius: 100%;
+  margin: 0 3px;
+  transition: 750ms allow-discrete;
+  transform: translateX(0px);
+}
+
+html.dark #slider {
+  transform: translateX(25px);
+  background-color: #333333;
+}
+
+#darkmode {
+  display: flex;
+  justify-content: center;
+  max-width: 80px;
 }
